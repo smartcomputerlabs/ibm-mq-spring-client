@@ -15,7 +15,7 @@ public class MqService {
        @RequestMapping("send")
        private String sendMessage(){
            try{
-               jmsTemplate.convertAndSend("","hello ms");
+               jmsTemplate.convertAndSend("q1","hello ms1");
                return "OK";
            }catch(JmsException e){
                e.printStackTrace();
